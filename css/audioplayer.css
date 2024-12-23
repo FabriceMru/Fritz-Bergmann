@@ -1,0 +1,83 @@
+/* ================================================== */
+/* Stile für Audio-Player (alle Seiten, wo Player vorhanden ist) */
+/* ================================================== */
+
+.sound {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.sound:hover {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.control-button {
+    background: transparent;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.control-button:active {
+    transform: scale(0.95);
+}
+
+.control-button#play-pause {
+    background: rgba(255, 255, 255, 0.2);
+    width: 45px;
+    height: 45px;
+}
+
+.control-button#play-pause:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* ================================================== */
+/* Responsive Design für kleinere Bildschirme (alle Seiten) */
+/* ================================================== */
+@media (max-width: 768px) {
+    .booking-form {
+        width: 90%;
+    }
+
+    .booking-form input,
+    .booking-form textarea,
+    .booking-form button {
+        width: 100%;
+    }
+
+    .sound {
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 15px;
+    }
+
+    .control-button {
+        width: 35px;
+        height: 35px;
+    }
+
+    .control-button#play-pause {
+        width: 40px;
+        height: 40px;
+    }
+}

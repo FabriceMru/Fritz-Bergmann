@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+
+/* ================================================== */
+/* Global Styles and Reset */
+/* ================================================== */
+
+/* Reset styles for consistent rendering across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    font-family: 'M PLUS Rounded 1c', serif;
+    overflow: auto; /* Prevents scrolling */
+    padding-bottom: 100px; /* Platz für den Footer */
+
+
+}
+/* ================================================== */
+/* Main Content Layout */
+/* ================================================== */
+
+.main {
+    min-height: calc(100vh - 60px);
+    padding-top: 60px;
+    padding-bottom: 100px; /* Add padding for footer */
+    background: url('/media/images/fritz-marshall-sitting_quadrat.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    z-index: 1;
+}
+/* ================================================== */
+/* Navigation Bar Styles */
+/* ================================================== */
+
+.navigation-bar {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: url('/media/images/fritz-marshall-sitting_quadrat.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed; /* Fixed position for consistent placement */
+    z-index: 10; /* Ensures the navigation stays on top */
+    top: 0;
+    padding: 15px 30px;
+}
+
+/* Individual link styling */
+.top {
+    color: black;
+    text-decoration: none; /* Entfernt die Unterstreichung */
+    font-size: 28px; /* Schriftgröße */
+    margin: 0 15px; /* Abstand zwischen den Links */
+    font-family: 'M PLUS Rounded 1c', serif;
+    font-weight: normal;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for links */
+a:hover {
+    color: navajowhite;
+    text-decoration: overline;
+    font-style: italic;
+    text-shadow: -1px 0 black, 0 1px black, 0 -1px black;
+}
+
+/* Default link styling */
+a {
+    color: gainsboro;
+    height: auto;
+}
+
+
+/* ================================================== */
+/* Audio Player Styles */
+/* ================================================== */
+
+/* Audio player container */
+.sound {
+    position: fixed;
+    top: 342px;
+    right: 20px;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    z-index: 1000; /* Ensures the audio player stays above other elements */
+}
+
+/* Hover effect for the audio player */
+.sound:hover {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Individual audio player button styles */
+.control-button {
+    background: transparent;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover effect for audio player buttons */
+.control-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.2s ease;
+}
+
+.control-button:hover::before {
+    transform: scale(1);
+}
+
+/* Active state for audio player buttons */
+.control-button:active {
+    transform: scale(0.95);
+}
+
+/* Styling for Play/Pause Button */
+.control-button#play-pause {
+    background: rgba(255, 255, 255, 0.2);
+    width: 45px;
+    height: 45px;
+}
+
+.control-button#play-pause:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Volume button styles */
+.control-button#volume {
+    opacity: 0.8;
+}
+
+.control-button#volume:hover {
+    opacity: 1;
+}
+
+/* Active button animations */
+.control-button.active {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+/* ================================================== */
+/* Footer Styles */
+/* ================================================== */
+
+/* Footer Styling */
+footer {
+    background-color: rgba(51, 51, 51, 0.7); /* Transparent dark background */
+    color: grey;
+    padding: 20px;
+    width: 100%;
+    position: fixed; /* Change to fixed */
+    bottom: 0; /* Stick to bottom */
+    left: 0; /* Ensure full width alignment */
+    z-index:11;
+    flex: 1;
+    min-width: 10px;
+    text-align: center;
+}
+
+
+
+.footer-section {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: grey;
+}
+
+.footer-section span {
+    font-size: 14px;
+    line-height: 1;
+    margin: 0;
+}
+
+/* ================================================== */
+/* Responsive Design */
+/* ================================================== */
+
+@media (max-width: 768px) {
+    /* Adjust audio player for smaller screens */
+    .sound {
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 15px;
+    }
+
+    /* Scale down audio player buttons */
+    .control-button {
+        width: 35px;
+        height: 35px;
+    }
+
+    .control-button#play-pause {
+        width: 40px;
+        height: 40px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+}

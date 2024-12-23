@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Fabrice Nadal" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <title>JL Fritz Bergmann</title>
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav class="navigation-bar">
+    <a class="top" href="index.html">Home</a>
+    <a class="top" href="about.html">Über mich</a>
+    <a class="top" href="gallery.html">Galerie</a>
+    <a class="top" href="events.html">Veranstaltungen</a>
+    <a class="top" href="booking.html">Anfrage</a>
+</nav>
+
+<!-- Main Content -->
+<main>
+<div class="main-content">
+    <!-- Audio Player Controls -->
+    <div class="sound">
+        <!-- Rewind Button -->
+        <button id="rewind" class="control-button" aria-label="Previous track">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 20L9 12L19 4V20Z"></path>
+                <path d="M9 20L9 4"></path>
+            </svg>
+        </button>
+
+        <!-- Play/Pause Button -->
+        <button id="play-pause" class="control-button" aria-label="Play or pause">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+        </button>
+
+        <!-- Forward Button -->
+        <button id="forward" class="control-button" aria-label="Next track">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 4L15 12L5 20V4Z"></path>
+                <path d="M15 4V20"></path>
+            </svg>
+        </button>
+
+        <!-- Volume Button -->
+        <button id="volume" class="control-button" aria-label="Toggle volume">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+            </svg>
+        </button>
+
+        <!-- Hidden Audio Element -->
+        <audio id="audio" preload="auto"></audio>
+    </div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="footer">
+        <!-- Copyright Section -->
+            <span>Copyright© 2024 Kōbō Kitsune. Alle Rechte vorbehalten. Diese Webseite wird privat betrieben und verfolgt keine kommerziellen Interessen.
+            </span>
+</footer>
+
+<!-- JavaScript -->
+<script src="../js/audio-player.js"></script>
+</body>
+</html>
+

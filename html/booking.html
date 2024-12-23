@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/booking.css" />
+    <title>Anfrage</title>
+</head>
+
+<body>
+<div class="backgrounds">
+    <!-- Header Section -->
+    <h1 class="buchungsanfrage">Buchungsanfrage</h1>
+
+    <!-- Booking Form Section -->
+    <div class="booking-form">
+        <form
+                action="https://formspree.io/f/mrgnyeyk"
+                method="POST"
+                class="hintergrundform"
+        >
+            <input type="text" name="firstname" placeholder="Vorname" required />
+            <input type="text" name="lastname" placeholder="Nachname" required />
+            <input type="hidden" name="_subject" value="Neue Buchungsanfrage" />
+            <input type="text" name="_honey" style="display: none" />
+            <input type="email" id="email" name="email" placeholder="E-Mail" required />
+            <input type="tel" name="phone" placeholder="Telefonnummer" required />
+            <input
+                    type="text"
+                    name="eventType"
+                    placeholder="Veranstaltungsart (z. B. Hochzeit, Konzerte, Firmenevents etc.)"
+                    required
+            />
+            <input type="date" name="date" placeholder="Datum" required />
+            <input type="text" name="location" placeholder="Ort" />
+            <input type="text" name="budget" placeholder="Budget" required />
+            <textarea
+                    name="notes"
+                    placeholder="Zusätzliche Anmerkungen"
+                    rows="5"
+            ></textarea>
+            <button type="submit">Anfrage senden</button>
+        </form>
+    </div>
+
+    <!-- Back Button Section -->
+    <div class="back-home-button3">
+        <a href="index.html">Zurück zur Startseite</a>
+    </div>
+</div>
+</body>
+</html>

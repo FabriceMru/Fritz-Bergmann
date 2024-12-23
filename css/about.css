@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+
+/* ================================================== */
+/* Global Styles and Reset */
+/* ================================================== */
+
+/* Reset styles for consistent cross-browser rendering */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling for the document */
+body,
+html {
+    height: 100%;
+    font-family: 'M PLUS Rounded 1c', serif;
+    overflow: hidden;
+}
+
+/* ================================================== */
+/* Navigation Bar Styles */
+/* ================================================== */
+
+/* Styling for the navigation bar */
+.navigation-bar {
+    width: 96%;
+    position: fixed;
+    list-style: none;
+    margin: 35px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'M PLUS Rounded 1c', serif;
+    font-size: 25px;
+    color: black;
+}
+
+/* Individual link styling */
+.top {
+    color: black;
+    text-decoration: underline;
+    font-size: 28px;
+    font-weight: normal;
+}
+
+/* Hover effect for links */
+a:hover {
+    color: black;
+    text-decoration: overline;
+}
+
+/* Default link color */
+a {
+    color: gainsboro;
+}
+
+/* ================================================== */
+/* About Page Image Styles */
+/* ================================================== */
+
+/* Styling for the main background image */
+.aboutpic {
+    margin: 0;
+    display: block;
+    width: 100%;
+    height: 130vh;
+    object-fit: cover;
+}
+
+/* ================================================== */
+/* Content Wrapper Styles */
+/* ================================================== */
+
+/* Main wrapper for the content */
+.content-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: url('/media/images/fritz-backstage-smile_quer.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+}
+
+/* Left Text Box Styling */
+.text-box-l p {
+    position: absolute;
+    width: 400px;
+    height: 700px;
+    padding: 30px;
+    left: 200px;
+    background-color: rgba(0, 0, 0, 0.7); /* Transparent black background */
+    color: white; /* White text */
+    border: 1px solid rgba(255, 255, 255, 0.7); /* Semi-transparent white border */
+    border-radius: 10px; /* Rounded corners */
+    text-align: start;
+    z-index: 2; /* Above the background */
+    font-family: 'M PLUS Rounded 1c', serif;
+    font-size: 16px;
+}
+
+/* Right Text Box Styling */
+.text-box-r p {
+    position: absolute;
+    width: 400px;
+    height: 700px;
+    padding: 20px;
+    right: 200px;
+    background-color: rgba(0, 0, 0, 0.7); /* Transparent black background */
+    color: white; /* White text */
+    border: 1px solid rgba(255, 255, 255, 0.7); /* Semi-transparent white border */
+    border-radius: 10px; /* Rounded corners */
+    text-align: end;
+    z-index: 2; /* Above the background */
+    font-family: 'M PLUS Rounded 1c', serif;
+    font-size: 16px;
+}
+
+/* ================================================== */
+/* Button Styles */
+/* ================================================== */
+
+/* Back-to-Home button styling */
+.back-home-button {
+    position: fixed;
+    bottom: 20px; /* Position button at the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%);
+    background-color: rgba(128, 128, 128, 0.5);
+    padding: 15px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    z-index: 9999;
+    font-size: 18px;
+    font-family: 'M PLUS Rounded 1c', serif;
+    font-weight: bold;
+    text-decoration: none; /* Remove underline */
+    color: white; /* Default button text color */
+}
+
+/* Hover effect for the back-home button */
+.back-home-button a {
+    color: white;
+    text-decoration: none;
+}
+
+.back-home-button:hover {
+    background-color: rgba(128, 128, 128, 0.7); /* Darker background on hover */
+    color: #e0e0e0; /* Lighter text on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5); /* Deeper shadow on hover */
+}
+
+/* ================================================== */
+/* Additional Positioning Styles */
+/* ================================================== */
+
+/* Links positioning */
+.links-about {
+    left: 10%;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+/* Right-aligned links */
+.rechts-about {
+    right: 10%;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+/* ================================================== */
+/* Responsive Design for Smaller Screens */
+/* ================================================== */
+
+@media (max-width: 768px) {
+    /* Ensure the background image remains fixed and fills the screen */
+    .content-wrapper {
+        flex-direction: column; /* Stack text vertically */
+        justify-content: center; /* Center vertically */
+        align-items: center; /* Center horizontally */
+        height: 100vh;
+        background-size: cover; /* Ensure the background fills the viewport */
+        background-attachment: fixed; /* Fix the background */
+    }
+
+    /* Adjust text boxes for mobile */
+    .text-box-l p,
+    .text-box-r p {
+        width: 90%; /* Reduce width for smaller screens */
+        height: auto; /* Adjust height */
+        margin: 10px auto; /* Center the boxes */
+        text-align: center; /* Center-align the text */
+    }
+
+    /* Hide back-home button on smaller screens */
+    .back-home-button {
+        display: none;
+    }
+}

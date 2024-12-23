@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+
+/* ================================================== */
+/* Global Styles and Reset */
+/* ================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    font-family: 'M PLUS Rounded 1c', serif;
+    overflow: hidden;
+}
+
+/* ================================================== */
+/* Header Section (Booking) */
+/* ================================================== */
+.buchungsanfrage {
+    color: #ccc;
+    text-align: center;
+    padding: 50px;
+}
+
+/* ================================================== */
+/* Booking Form Styles */
+/* ================================================== */
+.booking-form {
+    background-color: rgba(0, 0, 0, 0.7); /* Dark transparent background */
+    color: white;
+    padding: 20px;
+    width: 50%;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.booking-form input,
+.booking-form textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    resize: none;
+}
+
+.booking-form input:focus,
+.booking-form textarea:focus {
+    border: 1px solid #fff; /* Highlight on focus */
+    outline: none;
+}
+
+.booking-form button {
+    width: 50%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #4caf50; /* Green button */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.booking-form button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* ================================================== */
+/* Background Section */
+/* ================================================== */
+.backgrounds {
+    background: url('/media/images/pultbunt_quer.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 110vh; /* Extra height for large backgrounds */
+    width: 100%;
+    object-fit: cover;
+}
+
+/* ================================================== */
+/* Back Button Styles */
+/* ================================================== */
+.back-home-button3 {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-family: 'M PLUS Rounded 1c', serif;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 87%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(128, 128, 128, 0.5);
+    padding: 15px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    z-index: 9999;
+}
+
+.back-home-button3 a {
+    color: white;
+    text-decoration: none;
+}
+
+.back-home-button3:hover {
+    background-color: rgba(128, 128, 128, 0.7); /* Darker background on hover */
+    color: #e0e0e0; /* Lighter text on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5); /* Deeper shadow on hover */
+}
+
+/* ================================================== */
+/* Responsive Design (Mobile View) */
+/* ================================================== */
+@media (max-width: 768px) {
+    .booking-form {
+        width: 90%;
+    }
+
+    .booking-form input,
+    .booking-form textarea,
+    .booking-form button {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .buchungsanfrage {
+        font-size: 20px;
+    }
+
+    .back-home-button3 {
+        display: none; /* hides button on mobile devices */
+    }
+}

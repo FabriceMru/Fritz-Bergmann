@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+
+/* ================================================== */
+/* Global Styles and Reset */
+/* ================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    font-family: 'M PLUS Rounded 1c', serif;
+    overflow: hidden;
+}
+
+/* ================================================== */
+/* Gallery Container and Carousel */
+/* ================================================== */
+
+h2 {
+
+}
+/* Main container for the carousel */
+.carousel-container {
+    height: 100vh;
+    width: 100vw;
+    background: url('/media/images/fritz-seiteguitrarre-bühne_quer.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+
+/* Header text for the gallery */
+.carousel-container h2 {
+    color: white;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Carousel styling */
+.carousel {
+    position: absolute;
+    width: 800px;
+    height: 900px;
+    left: 200px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Slides container */
+.carousel-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /* Adjust based on number of images */
+    height: 100%;
+}
+
+/* Individual slide styling */
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* Carousel navigation buttons */
+button.prev,
+button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 5px;
+}
+
+button.prev {
+    left: 15px;
+}
+
+button.next {
+    right: 15px;
+}
+
+button.prev:hover,
+button.next:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+}
+
+/* ================================================== */
+/* Back to Home Button */
+/* ================================================== */
+
+.back-home-button2 {
+    position: fixed;
+    top: 55%; /* Vertikal zentrieren */
+    left: 80%; /* Horizontal zentrieren */
+    transform: translateX(-50%);
+    background-color: rgba(128, 128, 128, 0.5);
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    z-index: 9999;
+    font-size: 18px;
+    text-decoration: none;
+    font-family: 'M PLUS Rounded 1c', serif;
+    font-weight: bold;
+}
+
+.back-home-button2 a {
+    color: white;
+    text-decoration: none;
+}
+
+.back-home-button2:hover {
+    background-color: rgba(128, 128, 128, 0.7); /* Darker background on hover */
+    color: #e0e0e0; /* Lighter text on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5); /* Deeper shadow on hover */
+}
+
+/* ================================================== */
+/* Responsive Design */
+/* ================================================== */
+
+@media (max-width: 768px) {
+    /* Carousel centered and vertical for mobile */
+    .carousel {
+        width: 90vw ;
+        height: 90vh;
+        justify-content: center;
+        align-items: flex-start;
+        border-radius: 15px;
+        position: absolute;
+        left: 20px;
+    }
+
+    .carousel-container {
+        font-size: 24px; /* Smaller header for mobile */
+    }
+
+    /* Hide back button on mobile */
+    .back-home-button2 {
+        display: none;
+    }
+    /* Ensure images fit properly */
+    .carousel-image {
+        width: 100%;
+        height: 100%; /* Use full height */
+        object-fit: contain; /* Adjust image fit to show entire image */
+    }
+
+    button.prev,
+    button.next {
+        padding: 8px 10px; /* Smaller navigation buttons for mobile */
+    }
+}

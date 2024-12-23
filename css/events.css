@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+
+/* ================================================== */
+/* Global Styles and Reset */
+/* ================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    font-family: 'M PLUS Rounded 1c', serif;
+    overflow: hidden;
+}
+
+/* ================================================== */
+/* Header Styles  events*/
+/* ================================================== */
+
+/* Styling for gallery header */
+h1 {
+    color: white; /* Set text color to white */
+    font-family: 'M PLUS Rounded 1c', serif; /* Use consistent font */
+    text-decoration: none;
+    font-size: 40px; /* Adjust font size */
+    text-align: center;
+}
+
+/* ================================================== */
+/* Image Container and Carousel Styles */
+/* ================================================== */
+
+/* Styling for the image container */
+.image-container2 {
+    height: 100vh;
+    width: 100vw;
+    background: url('/media/images/fritz-seiteguitrarre-bühne_quer.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'M PLUS Rounded 1c', serif;
+}
+
+/* Styling for carousel images */
+.first-image {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border: 2px solid #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for carousel images */
+.first-image:hover {
+    transform: scale(1.4);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* ================================================== */
+/* Back to Home Button Styles */
+/* ================================================== */
+
+.back-home-button {
+    position: fixed;
+    bottom: 20px; /* Position button at the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%);
+    background-color: rgba(128, 128, 128, 0.5);
+    padding: 15px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    z-index: 9999;
+    font-size: 18px;
+    font-family: 'M PLUS Rounded 1c', serif;
+    font-weight: bold;
+    text-decoration: none; /* Remove underline */
+    color: white; /* Default button text color */
+}
+
+/* Hover effect for the button */
+.back-home-button a {
+    color: white;
+    text-decoration: none;
+}
+
+.back-home-button:hover {
+    background-color: rgba(128, 128, 128, 0.7); /* Darker background on hover */
+    color: #e0e0e0; /* Lighter text on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5); /* Deeper shadow on hover */
+}
+
+/* ================================================== */
+/* Responsive Design (Mobile View) */
+/* ================================================== */
+
+@media (max-width: 768px) {
+    .back-home-button {
+        display: none; /* Hide button on smaller screens */
+    }
+
+    .first-image {
+        max-height: 300px; /* Adjust image size for mobile */
+    }
+
+    h1 {
+        font-size: 28px; /* Reduce header size for mobile */
+    }
+}
